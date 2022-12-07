@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState} from "react";
 import {
   Container,
   Grid,
@@ -12,7 +12,7 @@ import { useDispatch } from "react-redux";
 import { useHistory, useLocation } from "react-router-dom";
 import ChipInput from "material-ui-chip-input";
 
-import { getPosts, getPostsBySearch } from "../../actions/posts";
+import { getPostsBySearch } from "../../actions/posts";
 import Posts from "../Posts/Posts";
 import Form from "../Form/Form";
 import useStyles from "./styles";
@@ -85,7 +85,7 @@ const Home = () => {
               />
               <Button onClick={searchPost} className={classes.searchButton} color="primary" variant="contained">Chercher</Button>
             </AppBar>
-            
+
             <Form currentId={currentId} setCurrentId={setCurrentId} />
 
             {(!searchQuery && !tags.length) && (

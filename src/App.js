@@ -3,6 +3,7 @@ import { BrowserRouter, Switch, Route, Redirect } from "react-router-dom";
 import { gapi } from "gapi-script";
 
 import Navbar from "./components/Navbar/Navbar";
+import dotenv from 'dotenv';
 import Home from "./components/Home/Home";
 import Auth from "./components/Auth/Auth";
 import { Container } from "@material-ui/core";
@@ -13,10 +14,9 @@ const App = () => {
 
   gapi.load("client:auth2", () => {
     gapi.client.init({
-      clientId:
-        "656412306637-ir3njoehf2fs65ois8jodommsckhg8ja.apps.googleusercontent.com",
+      clientId:process.env.CLIENT_ID,
       plugin_name: "auth",
-      scope:"email"
+      scope: 'https://www.googleapis.com/auth/gmail.readonly'
     });
   });
   return (

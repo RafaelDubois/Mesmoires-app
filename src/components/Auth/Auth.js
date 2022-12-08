@@ -11,6 +11,8 @@ import LockOutlinedIcon from "@material-ui/icons/LockOutlined";
 import { GoogleLogin } from "react-google-login";
 import { useDispatch } from "react-redux";
 import { useHistory } from "react-router-dom";
+import dotenv from 'dotenv';
+
 
 import useStyles from "./styles";
 import Input from "./Input";
@@ -127,7 +129,7 @@ const Auth = () => {
             {isSignup ? "S'inscrire" : "Se Connecter"}
           </Button>
           <GoogleLogin
-            clientId="656412306637-ir3njoehf2fs65ois8jodommsckhg8ja.apps.googleusercontent.com"
+            clientId={procces.env.CLIENT_ID}
             plugin_name='App Name that you used in google developer console API'
 
             render={(renderProps) => (

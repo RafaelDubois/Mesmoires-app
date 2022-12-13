@@ -12,7 +12,7 @@ const App = () => {
 
   gapi.load("client:auth2", () => {
     gapi.client.init({
-      clientId:process.env.CLIENT_ID,
+      clientId:process.env.REACT_APP_CLIENT_ID,
       plugin_name: "auth",
       scope: 'https://www.googleapis.com/auth/gmail.readonly'
     });

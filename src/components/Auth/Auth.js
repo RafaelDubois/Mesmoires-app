@@ -129,7 +129,7 @@ const Auth = () => {
             {isSignup ? "S'inscrire" : "Se Connecter"}
           </Button>
           <GoogleLogin
-            clientId={procces.env.CLIENT_ID}
+            clientId={process.env.CLIENT_ID}
             plugin_name='App Name that you used in google developer console API'
 
             render={(renderProps) => (

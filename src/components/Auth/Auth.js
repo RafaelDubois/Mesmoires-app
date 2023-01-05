@@ -129,7 +129,7 @@ const Auth = () => {
           </Button>
           <GoogleLogin
             clientId={process.env.REACT_APP_CLIENT_ID}
-            plugin_name='App Name that you used in google developer console API'
+            plugin_name='memories-project'
 
             render={(renderProps) => (
               <Button
